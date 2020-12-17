@@ -1,6 +1,7 @@
 module.exports = {
   flags: {
     FAST_REFRESH: true,
+    PRESERVE_WEBPACK_CACHE: true,
   },
   siteMetadata: {
     title: `Bruno Chirelli Portfólio`,

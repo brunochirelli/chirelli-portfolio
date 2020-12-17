@@ -8,7 +8,7 @@
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
     "babel-plugin-styled-components": "^1.12.0",
-    "gatsby": "^2.26.1",
+    "gatsby": "^2.29.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-material-ui": "^2.1.10",
@@ -26,7 +26,10 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
     "babel-jest": "^26.6.3",
+    "babel-plugin-transform-imports": "^2.0.0",
     "babel-preset-gatsby": "^0.9.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
@@ -43,6 +46,16 @@
     "gatsby"
   ],
   "license": "0BSD",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "ignorePatterns": [
+      "src/*",
+      "!src/test.js"
+    ]
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -50,7 +63,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest -u --watch --coverage"
   },
   "repository": {
     "type": "git",
