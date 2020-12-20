@@ -1,28 +1,31 @@
-import React from "react"
-import { PageProps, Link, graphql } from "gatsby"
+import React from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout";
+import PageHeader from "../components/PageHeader";
+import { Container } from "@material-ui/core";
 
-type DataProps = {
-  site: {
-    buildTime: string
-  }
-}
+import HomeContent from "../content/HomeContent.mdx";
+import { Colors } from "../themes/defaultTheme";
+import Content from "../components/Content";
 
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
-  <Layout>
-    <SEO title="Using TypeScript" />
-    <h1>Gatsby supports TypeScript by default!</h1>
-  </Layout>
-)
+const Home: React.FC = () => {
+  return (
+    <Layout pageLabel="Home">
+      <PageHeader
+        title="Olá, jovem!"
+        color={Colors.main}
+        lead={
+          "Aqui quem vos fala é Bruno Chirelli, sou desenvolvedor React frontend com experiência em comunicação e negócios."
+        }
+      />
 
-export default UsingTypescript
+      <Container>
+        <Content>
+          <HomeContent />
+        </Content>
+      </Container>
+    </Layout>
+  );
+};
 
-export const query = graphql`
-  {
-    site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
-    }
-  }
-`
+export default Home;
