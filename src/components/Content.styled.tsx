@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContentStyled = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 
   h2,
   h3,
