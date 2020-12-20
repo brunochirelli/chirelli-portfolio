@@ -9,38 +9,61 @@ import {
   Language,
   PageLocation,
 } from "./Header.styled";
+import OverlayNav from "./OverlayNav";
+import { Lang } from "./Layout";
 
 type HeaderProps = {
   pageLabel: string;
+  lang: Lang;
+  setLang: Function;
+  open: boolean;
+  onOpen(): void;
+  onClose(): void;
 };
 
-const Header: React.FC<HeaderProps> = ({ pageLabel }) => (
-  <HeaderStyled>
-    <IconButton color="inherit">
-      <Menu />
-    </IconButton>
+const Header: React.FC<HeaderProps> = ({
+  pageLabel,
+  lang,
+  setLang,
+  open,
+  onOpen,
+  onClose,
+}) => {
+  return (
+    <HeaderStyled>
+      <div>
+        <IconButton color="inherit" onClick={onOpen}>
+          <Menu />
+        </IconButton>
+        <OverlayNav
+          open={open}
+          onOpen={onOpen}
+          onClose={onClose}
+          lang={lang}
+          setLang={setLang}
+        />
+      </div>
 
-    <Typography component={Logo} to="/">
-      Bruno Chirelli
-    </Typography>
-    <PageLocation>{pageLabel}</PageLocation>
+      <Typography component={Logo} to="/">
+        Bruno Chirelli
+      </Typography>
+      <PageLocation>{pageLabel}</PageLocation>
 
-    <Language>
-      <>EN</>
-    </Language>
+      <Language>{lang}</Language>
 
-    <Social>
-      <IconButton color="inherit">
-        <LinkedIn />
-      </IconButton>
-      <IconButton color="inherit">
-        <GitHub />
-      </IconButton>
-      <IconButton color="inherit">
-        <Email />
-      </IconButton>
-    </Social>
-  </HeaderStyled>
-);
+      <Social>
+        <IconButton color="inherit">
+          <LinkedIn />
+        </IconButton>
+        <IconButton color="inherit">
+          <GitHub />
+        </IconButton>
+        <IconButton color="inherit">
+          <Email />
+        </IconButton>
+      </Social>
+    </HeaderStyled>
+  );
+};
 
 export default Header;
