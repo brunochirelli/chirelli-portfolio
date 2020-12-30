@@ -1,4 +1,3 @@
-import { createMuiTheme } from "@material-ui/core/styles";
 import { DefaultTheme } from "styled-components";
 
 export enum CustomSizes {

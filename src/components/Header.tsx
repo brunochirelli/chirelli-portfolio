@@ -1,6 +1,6 @@
 import React from "react";
 import { Email, GitHub, LinkedIn, Menu } from "@material-ui/icons";
-import { Box, Typography, IconButton } from "@material-ui/core";
+import { Hidden, IconButton } from "@material-ui/core";
 
 import {
   HeaderStyled,
@@ -11,45 +11,40 @@ import {
 } from "./Header.styled";
 import OverlayNav from "./OverlayNav";
 import { Lang } from "./Layout";
+import MenuItems from "./MenuItems";
 
 type HeaderProps = {
   pageLabel: string;
   lang: Lang;
-  setLang: Function;
+  setLang: (a?: any) => void;
   open: boolean;
-  onOpen(): void;
-  onClose(): void;
+  onOpen: () => void;
+  onClose: () => void;
 };
 
-const Header: React.FC<HeaderProps> = ({
-  pageLabel,
-  lang,
-  setLang,
-  open,
-  onOpen,
-  onClose,
-}) => {
+const Header = (props: HeaderProps) => {
   return (
     <HeaderStyled>
-      <div>
-        <IconButton color="inherit" onClick={onOpen}>
+      <Hidden mdUp>
+        <IconButton color="inherit" onClick={props.onOpen}>
           <Menu />
         </IconButton>
         <OverlayNav
-          open={open}
-          onOpen={onOpen}
-          onClose={onClose}
-          lang={lang}
-          setLang={setLang}
+          open={props.open}
+          onOpen={props.onOpen}
+          onClose={props.onClose}
+          lang={props.lang}
+          setLang={props.setLang}
         />
-      </div>
+      </Hidden>
 
-      <Typography component={Logo} to="/">
-        Bruno Chirelli
-      </Typography>
-      <PageLocation>{pageLabel}</PageLocation>
+      <Logo to="/">Bruno Chirelli</Logo>
+      <PageLocation>{props.pageLabel}</PageLocation>
 
-      <Language>{lang}</Language>
+      {/* <Language>{props.lang}</Language> */}
+      <Hidden smDown>
+        <MenuItems />
+      </Hidden>
 
       <Social>
         <IconButton color="inherit">
