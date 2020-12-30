@@ -11,29 +11,6 @@ export const OverlayNavStyled = styled.div`
   background: white;
 `;
 
-export const NavLinks = styled.nav`
-  margin-bottom: 2.5rem;
-
-  ul,
-  li {
-    margin: 0;
-    padding: 0;
-    color: ${props => props.theme.colors.black};
-    font-size: 2.2rem;
-    font-family: ${props => props.theme.fonts.heading};
-    list-style-type: none;
-
-    a {
-      color: ${props => props.theme.colors.black};
-      text-decoration: none;
-
-      &:hover {
-        color: ${props => props.theme.colors.main};
-      }
-    }
-  }
-`;
-
 export const NavHeader = styled.div`
   .logo {
     color: ${props => props.theme.colors.main};

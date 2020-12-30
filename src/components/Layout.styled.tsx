@@ -5,12 +5,20 @@ export const LayoutStyled = styled.div`
   grid-template-rows: minmax(100vh, auto) auto;
   grid-template-columns: ${props => props.theme.sizes.headerHeight} 1fr;
 
+  @media screen and (min-width: 960px) {
+    grid-template-columns: 300px 1fr;
+  }
+
   & > header {
     position: fixed;
     top: 0;
     width: ${props => props.theme.sizes.headerHeight};
     height: 100vh;
     border-right: 0.1rem solid #dbe5db;
+
+    @media screen and (min-width: 960px) {
+      width: 300px;
+    }
   }
 
   & > main {
