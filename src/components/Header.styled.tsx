@@ -13,7 +13,7 @@ export const HeaderStyled = styled.header`
 
   @media screen and (min-width: 960px) {
     align-items: flex-start;
-    padding: 2rem 0;
+    padding: 2rem;
   }
 `;
 
