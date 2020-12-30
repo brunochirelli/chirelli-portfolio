@@ -52,18 +52,20 @@ const Header = (props: HeaderProps) => {
       <Social>
         <IconButton
           color="inherit"
-          href="https://github.com/BrunoChirelli"
+          href="https://linkedin.com/in/BrunoChirelli"
           target="_blank"
           rel="noopener noreferer"
+          data-testid="header-social"
         >
           <LinkedIn />
         </IconButton>
 
         <IconButton
           color="inherit"
-          href="https://linkedin.com/in/BrunoChirelli"
+          href="https://github.com/BrunoChirelli"
           target="_blank"
           rel="noopener noreferer"
+          data-testid="header-social"
         >
           <GitHub />
         </IconButton>
