@@ -38,7 +38,9 @@ const Header = (props: HeaderProps) => {
         />
       </Hidden>
 
-      <Logo to="/">Bruno Chirelli</Logo>
+      <Logo to="/" data-testid="logo">
+        Bruno Chirelli
+      </Logo>
       <PageLocation>{props.pageLabel}</PageLocation>
 
       {/* <Language>{props.lang}</Language> */}
