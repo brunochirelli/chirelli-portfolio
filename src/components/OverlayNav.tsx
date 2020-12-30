@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import { IconButton, SwipeableDrawer, Typography } from "@material-ui/core";
 import { Close, Email, GitHub, LinkedIn } from "@material-ui/icons";
@@ -8,27 +7,27 @@ import {
   LanguageOption,
   NavFooter,
   NavHeader,
-  NavLinks,
   NavSocial,
   OverlayNavStyled,
 } from "./OverlayNav.styled";
 import { Lang } from "./Layout";
+import MenuItems from "./MenuItems";
 
 type OverlayNavProps = {
-  lang: string;
-  setLang: Function;
+  lang: Lang;
+  setLang: (lang?: Lang) => void;
   open: boolean;
-  onClose(): void;
-  onOpen(): void;
+  onClose: () => void;
+  onOpen: () => void;
 };
 
-const OverlayNav: React.FC<OverlayNavProps> = ({
+const OverlayNav = ({
+  lang,
+  setLang,
   open,
   onClose,
   onOpen,
-  lang,
-  setLang,
-}) => {
+}: OverlayNavProps) => {
   const handleLang = (lang: Lang): void => {
     setLang(lang);
   };
@@ -47,41 +46,25 @@ const OverlayNav: React.FC<OverlayNavProps> = ({
           </IconButton>
           <Typography className="logo">Bruno Chirelli</Typography>
         </NavHeader>
-        <NavLinks>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/sobre">Sobre</Link>
-            </li>
-            <li>
-              <Link to="/resume">Currículo</Link>
-            </li>
-            <li>
-              <Link to="/portfolio">Portfólio</Link>
-            </li>
-            <li>
-              <Link to="/contato">Contato</Link>
-            </li>
-          </ul>
-        </NavLinks>
+
+        <MenuItems />
+
         <NavFooter>
           <LanguageOption>
             {/* Needs refactor */}
             <div
-              className={lang === Lang.en ? "active" : ""}
+              className={lang === "EN" ? "active" : ""}
               role="button"
-              onClick={() => handleLang(Lang.en)}
+              onClick={() => handleLang("EN")}
             >
-              {Lang.en}
+              EN
             </div>
             <div
-              className={lang === Lang.ptBR ? "active" : ""}
+              className={lang === "PT-BR" ? "active" : ""}
               role="button"
-              onClick={() => handleLang(Lang.ptBR)}
+              onClick={() => handleLang("PT-BR")}
             >
-              {Lang.ptBR}
+              PT-BR
             </div>
           </LanguageOption>
           <NavSocial>
