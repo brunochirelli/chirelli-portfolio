@@ -10,11 +10,11 @@ type Skill = {
   level: SkillLevel;
 };
 
-type SkillSet = {
+interface SkillSet {
   main: Skill[];
   supportive: Skill[];
   backend: Skill[];
-};
+}
 
 export const skillData: SkillSet = {
   main: [
