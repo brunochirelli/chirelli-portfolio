@@ -4,19 +4,16 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { LayoutStyled } from "./Layout.styled";
 
+export declare type Lang = "EN" | "PT-BR";
+
 type LayoutProps = {
   children: React.ReactNode;
   pageLabel: string;
 };
 
-export enum Lang {
-  en = "EN",
-  ptBR = "PT-BR",
-}
-
-const Layout: React.FC<LayoutProps> = ({ children, pageLabel }) => {
+const Layout = ({ children, pageLabel }: LayoutProps) => {
   const [open, setOpen] = useState<boolean>(false);
-  const [lang, setLang] = useState<Lang>(Lang.en);
+  const [lang, setLang] = useState<Lang>("EN");
 
   const handleOpen = (): void => {
     setOpen(true);
