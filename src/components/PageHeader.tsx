@@ -3,13 +3,19 @@ import { Container } from "@material-ui/core";
 import { Colors } from "../themes/defaultTheme";
 import { Lead, PageHeaderStyled } from "./PageHeader.styled";
 
-interface PageHeaderProps {
+type PageHeaderProps = {
   title: string;
   lead?: string;
   color?: Colors;
-}
+};
 
-const PageHeader: React.FC<PageHeaderProps> = ({ title, lead, color }) => {
+/**
+ * PageHeader to display page name.
+ * Already includes a holding container
+ *
+ * @component
+ */
+const PageHeader = ({ title, lead, color }: PageHeaderProps) => {
   return (
     <Container data-testid="page-header">
       <PageHeaderStyled color={color}>{title}</PageHeaderStyled>
