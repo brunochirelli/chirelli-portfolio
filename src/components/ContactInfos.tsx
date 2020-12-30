@@ -1,10 +1,12 @@
+import React from "react";
 import { Box, Container, IconButton, Typography } from "@material-ui/core";
 import { GitHub, LinkedIn } from "@material-ui/icons";
-import React from "react";
+
+import { InfoStyled } from "./ContactInfos.styled";
 
 const ContactInfos = () => {
   return (
-    <Container>
+    <InfoStyled>
       <Typography variant="body1" paragraph>
         Entre em contato comigo pelas minhas redes sociais ou pelo email
       </Typography>
@@ -35,7 +37,7 @@ const ContactInfos = () => {
           bruno@chirelli.com.br
         </a>
       </Box>
-    </Container>
+    </InfoStyled>
   );
 };
 
