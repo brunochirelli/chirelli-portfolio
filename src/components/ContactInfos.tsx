@@ -11,19 +11,29 @@ const ContactInfos = () => {
       <Box>
         <IconButton
           href="https://linkedin.com/in/BrunoChirelli"
+          target="_blank"
+          rel="noreferrer noopener"
           style={{ color: "#8EC189" }}
         >
           <GitHub style={{ width: "3rem", height: "3rem" }} />
         </IconButton>
         <IconButton
           href="https://github.com/BrunoChirelli"
+          target="_blank"
+          rel="noreferrer noopener"
           style={{ color: "#8EC189" }}
         >
           <LinkedIn style={{ width: "3rem", height: "3rem" }} />
         </IconButton>
       </Box>
       <Box color="#8EC189" fontSize="1.5rem" marginY={2}>
-        <a href="mailto:bruno@chirelli.com.br">bruno@chirelli.com.br</a>
+        <a
+          href="mailto:bruno@chirelli.com.br"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          bruno@chirelli.com.br
+        </a>
       </Box>
     </Container>
   );
