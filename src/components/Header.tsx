@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Email, GitHub, LinkedIn, Menu } from "@material-ui/icons";
 import { Hidden, IconButton } from "@material-ui/core";
 
@@ -49,13 +50,30 @@ const Header = (props: HeaderProps) => {
       </Hidden>
 
       <Social>
-        <IconButton color="inherit">
+        <IconButton
+          color="inherit"
+          href="https://github.com/BrunoChirelli"
+          target="_blank"
+          rel="noopener noreferer"
+        >
           <LinkedIn />
         </IconButton>
-        <IconButton color="inherit">
+
+        <IconButton
+          color="inherit"
+          href="https://linkedin.com/in/BrunoChirelli"
+          target="_blank"
+          rel="noopener noreferer"
+        >
           <GitHub />
         </IconButton>
-        <IconButton color="inherit">
+
+        <IconButton
+          color="inherit"
+          href="mailto:bruno@chirelli.com.br"
+          target="_blank"
+          rel="noopener noreferer"
+        >
           <Email />
         </IconButton>
       </Social>
