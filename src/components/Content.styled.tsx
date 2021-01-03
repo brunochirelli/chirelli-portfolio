@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContentStyled = styled.div`
+const ContentStyled = styled.div`
   font-size: 1.25rem;
 
   h2,
@@ -31,3 +31,5 @@ export const ContentStyled = styled.div`
     }
   }
 `;
+
+export default ContentStyled;
