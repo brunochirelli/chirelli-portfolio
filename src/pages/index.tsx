@@ -4,11 +4,11 @@ import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 import { Container } from "@material-ui/core";
 
-import HomeContent from "../content/HomeContent.mdx";
+import HomeContent from "../content/home.mdx";
 import { Colors } from "../themes/defaultTheme";
-import Content from "../components/Content";
+import Content from "../components/Content.styled";
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <Layout pageLabel="Home">
       <PageHeader
@@ -18,7 +18,6 @@ const Home: React.FC = () => {
           "Aqui quem vos fala é Bruno Chirelli, sou desenvolvedor React frontend com experiência em comunicação e negócios."
         }
       />
-
       <Container>
         <Content>
           <HomeContent />

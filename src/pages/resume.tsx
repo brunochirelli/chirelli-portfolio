@@ -2,11 +2,11 @@ import React from "react";
 
 import { Container } from "@material-ui/core";
 
-import Content from "../components/Content";
+import Content from "../components/Content.styled";
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
 
-import ResumeContent from "../content/ResumeContent.mdx";
+import ResumeContent from "../content/resume.mdx";
 
 const Resume = () => {
   return (

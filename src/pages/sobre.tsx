@@ -3,9 +3,9 @@ import { Container } from "@material-ui/core";
 
 import Layout from "../components/Layout";
 import PageHeader from "../components/PageHeader";
-import Content from "../components/Content";
+import Content from "../components/Content.styled";
 
-import AboutContent from "../content/AboutContent.mdx";
+import AboutContent from "../content/sobre.mdx";
 
 const AboutMe = () => {
   return (
