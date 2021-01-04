@@ -31,6 +31,8 @@ const PortfolioSingle = () => {
           lead
           type
           slug
+          repo
+          live
         }
         body
       }
@@ -52,8 +54,14 @@ const PortfolioSingle = () => {
   `);
   return (
     <Layout pageLabel="Business">
-      <PageHeader title={mdx.frontmatter.title} lead={mdx.frontmatter.lead} />
-      <CustomDivider type="business" />
+      <PageHeader
+        title={mdx.frontmatter.title}
+        lead={mdx.frontmatter.lead}
+        repo={mdx.frontmatter.repo}
+        live={mdx.frontmatter.live}
+        type={mdx.frontmatter.type}
+      />
+
       <Content>
         <Container>
           <MDXRenderer>{mdx.body}</MDXRenderer>

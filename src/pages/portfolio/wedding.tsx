@@ -26,6 +26,8 @@ const WeddingCommerce = () => {
           lead
           type
           slug
+          repo
+          live
         }
         body
       }
@@ -34,7 +36,13 @@ const WeddingCommerce = () => {
 
   return (
     <Layout pageLabel="Tech">
-      <PageHeader title={mdx.frontmatter.title} lead={mdx.frontmatter.lead} />
+      <PageHeader
+        title={mdx.frontmatter.title}
+        lead={mdx.frontmatter.lead}
+        repo={mdx.frontmatter.repo}
+        live={mdx.frontmatter.live}
+        type={mdx.frontmatter.type}
+      />
       <Content>
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </Content>
