@@ -5,6 +5,7 @@ import Layout from "../../components/Layout";
 import PageHeader from "../../components/PageHeader";
 import Content from "../../components/Content.styled";
 import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Container } from "@material-ui/core";
 
 /**
  * Single page for wedding commerce project.
@@ -43,9 +44,11 @@ const WeddingCommerce = () => {
         live={mdx.frontmatter.live}
         type={mdx.frontmatter.type}
       />
-      <Content>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
-      </Content>
+      <Container maxWidth="sm" style={{ margin: 0 }}>
+        <Content>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </Content>
+      </Container>
     </Layout>
   );
 };

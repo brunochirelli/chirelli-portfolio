@@ -63,14 +63,12 @@ const PortfolioSingle = () => {
       />
 
       <Content>
-        <Container>
+        <Container maxWidth="md" style={{ margin: 0 }}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" style={{ margin: 0 }}>
           <Img fluid={nodes[0].childImageSharp.fluid} alt="" />
           <Img fluid={nodes[1].childImageSharp.fluid} alt="" />
-          <Img fluid={nodes[2].childImageSharp.fluid} alt="" />
-          <Img fluid={nodes[3].childImageSharp.fluid} alt="" />
           <Img fluid={nodes[4].childImageSharp.fluid} alt="" />
           <Img fluid={nodes[5].childImageSharp.fluid} alt="" />
           <Img fluid={nodes[6].childImageSharp.fluid} alt="" />
