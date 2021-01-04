@@ -6,10 +6,3 @@ Under development
 
 - React (Context API)
 - Gatsby
-
-## How to use
-
-```
-yarn install
-yarn start
-```
