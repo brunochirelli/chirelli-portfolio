@@ -8,7 +8,6 @@ import { Container } from "@material-ui/core";
 import Layout from "../../components/Layout";
 import PageHeader from "../../components/PageHeader";
 import Content from "../../components/Content.styled";
-import CustomDivider from "../../components/CustomDivider";
 
 /**
  * Single project page for Selva Cross T.
