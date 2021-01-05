@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import { IconButton, SwipeableDrawer, Typography } from "@material-ui/core";
 import { Close, Email, GitHub, LinkedIn } from "@material-ui/icons";
@@ -44,7 +45,15 @@ const OverlayNav = ({
           <IconButton edge="start" onClick={onClose}>
             <Close />
           </IconButton>
-          <Typography className="logo">Bruno Chirelli</Typography>
+          <Typography
+            className="logo"
+            component={Link}
+            to="/"
+            color="inherit"
+            style={{ textDecoration: "none" }}
+          >
+            Bruno Chirelli
+          </Typography>
         </NavHeader>
 
         <MenuItems />
