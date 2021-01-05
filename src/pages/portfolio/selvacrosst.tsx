@@ -8,7 +8,6 @@ import { Container } from "@material-ui/core";
 import Layout from "../../components/Layout";
 import PageHeader from "../../components/PageHeader";
 import Content from "../../components/Content.styled";
-import CustomDivider from "../../components/CustomDivider";
 
 /**
  * Single project page for Selva Cross T.
@@ -31,6 +30,8 @@ const PortfolioSingle = () => {
           lead
           type
           slug
+          repo
+          live
         }
         body
       }
@@ -52,17 +53,21 @@ const PortfolioSingle = () => {
   `);
   return (
     <Layout pageLabel="Business">
-      <PageHeader title={mdx.frontmatter.title} lead={mdx.frontmatter.lead} />
-      <CustomDivider type="business" />
+      <PageHeader
+        title={mdx.frontmatter.title}
+        lead={mdx.frontmatter.lead}
+        repo={mdx.frontmatter.repo}
+        live={mdx.frontmatter.live}
+        type={mdx.frontmatter.type}
+      />
+
       <Content>
-        <Container>
+        <Container maxWidth="md" style={{ margin: 0 }}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Container>
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" style={{ margin: 0 }}>
           <Img fluid={nodes[0].childImageSharp.fluid} alt="" />
           <Img fluid={nodes[1].childImageSharp.fluid} alt="" />
-          <Img fluid={nodes[2].childImageSharp.fluid} alt="" />
-          <Img fluid={nodes[3].childImageSharp.fluid} alt="" />
           <Img fluid={nodes[4].childImageSharp.fluid} alt="" />
           <Img fluid={nodes[5].childImageSharp.fluid} alt="" />
           <Img fluid={nodes[6].childImageSharp.fluid} alt="" />
