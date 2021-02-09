@@ -1,17 +1,19 @@
-import React, { useState } from "react";
-import Footer from "./Footer";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "@reach/router";
 
+import Footer from "./Footer";
 import Header from "./Header";
+
 import { LayoutStyled } from "./Layout.styled";
 
 export declare type Lang = "EN" | "PT-BR";
 
 type LayoutProps = {
   children: React.ReactNode;
-  pageLabel: string;
+  location?: object;
 };
 
-const Layout = ({ children, pageLabel }: LayoutProps) => {
+const Layout = ({ children, location }: LayoutProps) => {
   const [open, setOpen] = useState<boolean>(false);
   const [lang, setLang] = useState<Lang>("EN");
 
@@ -23,10 +25,14 @@ const Layout = ({ children, pageLabel }: LayoutProps) => {
     setOpen(false);
   };
 
+  useEffect(() => {
+    return handleClose();
+  }, [location]);
+
   return (
     <LayoutStyled>
       <Header
-        pageLabel={pageLabel}
+        pageLabel={""}
         open={open}
         onOpen={handleOpen}
         onClose={handleClose}
@@ -34,7 +40,6 @@ const Layout = ({ children, pageLabel }: LayoutProps) => {
         setLang={setLang}
       />
       <main>{children}</main>
-      <Footer />
     </LayoutStyled>
   );
 };
