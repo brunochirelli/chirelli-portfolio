@@ -4,15 +4,15 @@ import { Link } from "gatsby";
 import { IconButton, SwipeableDrawer, Typography } from "@material-ui/core";
 import { Close, Email, GitHub, LinkedIn } from "@material-ui/icons";
 
+import { Lang } from "./Layout";
+import MenuItems from "./MenuItems";
+
 import {
-  LanguageOption,
   NavFooter,
   NavHeader,
   NavSocial,
   OverlayNavStyled,
 } from "./OverlayNav.styled";
-import { Lang } from "./Layout";
-import MenuItems from "./MenuItems";
 
 type OverlayNavProps = {
   lang: Lang;
@@ -59,35 +59,35 @@ const OverlayNav = ({
         <MenuItems />
 
         <NavFooter>
-          <LanguageOption>
-            {/* Needs refactor */}
-            <div
-              className={lang === "EN" ? "active" : ""}
-              role="button"
-              onClick={() => handleLang("EN")}
-            >
-              EN
-            </div>
-            <div
-              className={lang === "PT-BR" ? "active" : ""}
-              role="button"
-              onClick={() => handleLang("PT-BR")}
-            >
-              PT-BR
-            </div>
-          </LanguageOption>
           <NavSocial>
-            <div>
+            <IconButton
+              color="inherit"
+              href="https://linkedin.com/in/BrunoChirelli"
+              target="_blank"
+              rel="noopener noreferer"
+              data-testid="header-social"
+            >
               <LinkedIn />
-            </div>
+            </IconButton>
 
-            <div>
+            <IconButton
+              color="inherit"
+              href="https://github.com/BrunoChirelli"
+              target="_blank"
+              rel="noopener noreferer"
+              data-testid="header-social"
+            >
               <GitHub />
-            </div>
+            </IconButton>
 
-            <div>
+            <IconButton
+              color="inherit"
+              href="mailto:bruno@chirelli.com.br"
+              target="_blank"
+              rel="noopener noreferer"
+            >
               <Email />
-            </div>
+            </IconButton>
           </NavSocial>
         </NavFooter>
       </OverlayNavStyled>
