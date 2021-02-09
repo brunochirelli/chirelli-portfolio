@@ -1,15 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
 import { Email, GitHub, LinkedIn, Menu } from "@material-ui/icons";
 import { Hidden, IconButton } from "@material-ui/core";
 
-import {
-  HeaderStyled,
-  Logo,
-  Social,
-  Language,
-  PageLocation,
-} from "./Header.styled";
+import { HeaderStyled, Logo, Social, PageLocation } from "./Header.styled";
 import OverlayNav from "./OverlayNav";
 import { Lang } from "./Layout";
 import MenuItems from "./MenuItems";
@@ -42,6 +35,7 @@ const Header = (props: HeaderProps) => {
       <Logo to="/" data-testid="logo">
         Bruno Chirelli
       </Logo>
+
       <PageLocation>{props.pageLabel}</PageLocation>
 
       {/* <Language>{props.lang}</Language> */}
