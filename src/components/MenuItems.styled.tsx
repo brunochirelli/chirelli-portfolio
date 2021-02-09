@@ -16,6 +16,7 @@ export const NavLinks = styled.nav`
     a {
       color: ${props => props.theme.colors.black};
       text-decoration: none;
+      transition: 0.2s all ease;
 
       &:hover {
         color: ${props => props.theme.colors.main};
