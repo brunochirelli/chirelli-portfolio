@@ -9,14 +9,14 @@ import ContactInfos from "../components/ContactInfos";
 
 const Contact = () => {
   return (
-    <Layout pageLabel="Contato">
+    <>
       <PageHeader
         title="Entre em Contato"
         lead="Estarei ansioso para conversar com você"
       />
 
       <ContactInfos />
-    </Layout>
+    </>
   );
 };
 

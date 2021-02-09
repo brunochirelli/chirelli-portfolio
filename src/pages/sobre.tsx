@@ -9,7 +9,7 @@ import AboutContent from "../content/sobre.mdx";
 
 const AboutMe = () => {
   return (
-    <Layout pageLabel="Sobre">
+    <>
       <PageHeader
         title="Sobre mim"
         lead="Acredito que boas empresas e produtos podem contribuir para o bem da comunidade"
@@ -19,7 +19,7 @@ const AboutMe = () => {
           <AboutContent />
         </Content>
       </Container>
-    </Layout>
+    </>
   );
 };
 

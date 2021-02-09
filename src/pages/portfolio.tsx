@@ -40,13 +40,13 @@ const PortfolioPage = () => {
     }
   `);
   return (
-    <Layout pageLabel="Portfólio">
+    <>
       <PageHeader title="Portfólio" />
       <Container>
         <Grid container spacing={2}>
           {projects.map(
-            ({ frontmatter }: Frontmatter): JSX.Element => (
-              <Grid item xs={12} sm={6}>
+            ({ frontmatter }: Frontmatter, i: number): JSX.Element => (
+              <Grid item xs={12} sm={6} key={i}>
                 <ProjectCard
                   title={frontmatter.title}
                   url={`/portfolio/${frontmatter.slug}`}
@@ -57,7 +57,7 @@ const PortfolioPage = () => {
           )}
         </Grid>
       </Container>
-    </Layout>
+    </>
   );
 };
 

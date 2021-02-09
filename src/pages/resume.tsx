@@ -10,7 +10,7 @@ import ResumeContent from "../content/resume.mdx";
 
 const Resume = () => {
   return (
-    <Layout pageLabel="Resumé">
+    <>
       <PageHeader
         title="Resumé"
         lead="Desenvolvedor React Frontend com experiência em comunicação e negócios"
@@ -20,7 +20,7 @@ const Resume = () => {
           <ResumeContent />
         </Content>
       </Container>
-    </Layout>
+    </>
   );
 };
 

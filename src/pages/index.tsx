@@ -10,7 +10,7 @@ import Content from "../components/Content.styled";
 
 const Home = () => {
   return (
-    <Layout pageLabel="Home">
+    <>
       <PageHeader
         title="Olá, jovem!"
         color={Colors.main}
@@ -23,7 +23,7 @@ const Home = () => {
           <HomeContent />
         </Content>
       </Container>
-    </Layout>
+    </>
   );
 };
 
