@@ -1,2 +1,6 @@
 import * as React from "react";
-export * from "./Button";
+import { Button } from "./core";
+
+export * from "theme-ui";
+export * from "./theme";
+export { Button };
