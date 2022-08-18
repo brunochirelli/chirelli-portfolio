@@ -5,22 +5,39 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint *.ts*"
+    "lint": "eslint *.ts*",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/cli": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/react": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.5",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
   },
   "dependencies": {
+    "@babel/core": "^7",
     "@emotion/react": "^11.10.0",
     "@mdx-js/react": "1",
+    "@theme-ui/css": "0.12.0",
     "@theme-ui/presets": "^0.14.7",
-    "react": "^16",
+    "react": "^17",
     "react-dom": "^17.0.2",
-    "theme-ui": "^0.14.7"
+    "require-from-string": "^2.0.2",
+    "storybook": "^6.5.10",
+    "theme-ui": "^0.14.7",
+    "webpack": "^5.74.0"
   }
 }
